@@ -60,7 +60,7 @@ textarea {
 }
 
 textarea:focus {
-    border: 2px solid #4caf50;
+    border: 2px solid #010f01;
     outline: none;
 }
 
@@ -68,7 +68,7 @@ textarea:focus {
 button {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(to right, #4caf50, #43a047);
+    background: linear-gradient(to right, #0f0f0f, #131313);
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -80,7 +80,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    background: linear-gradient(to right, #43a047, #4caf50);
+    background: linear-gradient(to right, #0e0f0e, #0d0e0d);
 }
 
 /* Output Card */
@@ -105,7 +105,7 @@ button:hover {
 }
 
 .output-card h2 span {
-    color: #4caf50;
+    color: #0d0e0d;
 }
 
 .output-card p {
