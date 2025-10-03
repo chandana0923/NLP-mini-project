@@ -42,4 +42,4 @@ def index():
     return render_template("index.html", text=text, full_lang=full_lang, prob=prob)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
