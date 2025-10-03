@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Detection App</title>
+    <title>🌍 Language Detection</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>🌍Language Detection</h1>
-        <form method="POST">
-            <textarea name="text" placeholder="Type your text here...">{{ text }}</textarea>
-            <button type="submit">Detect Language</button>
-        </form>
+    <div class="main-container">
+        <div class="header">
+            <h1>🌍 Language Detection</h1>
+            <p>Detect the language of any text instantly!</p>
+        </div>
 
-        {% if result %}
-        <div class="result">
-            <h2>Detected Code: {{ result }}</h2>
-            <h2>Language: {{ full_lang }}</h2>
-            {% if probs %}
-            <h3>Top Probable Languages:</h3>
-            <ul>
-                {% for lang, prob in probs %}
-                <li>{{ lang }} - {{ prob }}%</li>
-                {% endfor %}
-            </ul>
+        <div class="input-card">
+            <form method="POST">
+                <textarea name="text" placeholder="Type or paste your text here...">{{ text }}</textarea>
+                <button type="submit">🔍 Detect Language</button>
+            </form>
+        </div>
+
+        {% if full_lang %}
+        <div class="output-card">
+            <h2>Detected Language: <span>{{ full_lang }}</span></h2>
+            {% if prob %}
+                <p>Confidence: {{ prob }}%</p>
             {% endif %}
         </div>
         {% endif %}
